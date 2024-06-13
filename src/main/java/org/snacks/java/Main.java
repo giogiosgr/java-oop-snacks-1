@@ -4,24 +4,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//istanza e utilizzo  classe Studente
+		//istanza e utilizzo della classe Studente
 		Studente studente = new Studente ("Ajeje", "Brazorf", 33);
-		
-		System.out.println(studente.getAllData());
-		
-		
+		System.out.println(studente.getAllData() + "\n");
 		
 		//istanza e utilizzo della classe ContoBancario
-		ContoBancario conto = new ContoBancario(100);
+		ContoBancario conto101 = new ContoBancario(101);
 		
-		System.out.println(conto.getBalance());
+		//System.out.printf("Il saldo iniziale del conto %s è: %f€", conto101.getNumber(), conto101.getBalance());
+		System.out.println("Il saldo iniziale del conto numero " + conto101.getNumber() + " è di: " + conto101.getBalance() + "€" + "\n");
 		
-		conto.setSchei(1001.1);
+		conto101.deposit(1001.1);
 		
-		conto.leaveSchei (100.2);
+		conto101.withdraw(100.85);
 		
-		System.out.println(conto.getSchei());
-
+		System.out.println("Il saldo residuo del conto numero " + conto101.getNumber() + " è di: " + conto101.getBalance() + "€" + "\n");
 	}
 
 }
