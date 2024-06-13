@@ -4,7 +4,7 @@ public class ContoBancario {
     private int number;
     private double balance;
 	
-    private ContoBancario (int number) {
+    ContoBancario (int number) {
     	this.number = number;
     	this.balance = 0.0;
     }
