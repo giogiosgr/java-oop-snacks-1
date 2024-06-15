@@ -22,7 +22,11 @@ public class ContoBancario {
     }
     
     double getBalance() {
-    	return Math.floor(this.balance * 100) / 100;
+    	return this.balance;
+    }
+    
+    String getHumanBalance() {
+    	return String.format("%.2f", this.balance); 
     }
     
     int getNumber() {
