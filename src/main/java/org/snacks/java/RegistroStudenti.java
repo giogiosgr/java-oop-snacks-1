@@ -1,25 +1,25 @@
 package org.snacks.java;
 
 public class RegistroStudenti {
-	private String[] students;
-	private int index;
+	private Studente[] students;
 	
 	public RegistroStudenti() {
-		this.students = new String[1000];
-		this.index = 0;
+		this.students = new Studente[0];
 	}
 	
-	public void addStudent(String student) {
-		if (!student.equals("")) {
-			students[index] = student;
-			index++;
+	public void addStudent(Studente newStudent) {
+		Studente[] newStudents = new Studente[this.students.length + 1];
+		for (int i = 0; i < this.students.length; i++) {
+			newStudents[i] = this.students[i];
 		}
+        newStudents[this.students.length] = newStudent;    
+        this.students = newStudents;
 	}
 	
 	public void getStudents() {
 		System.out.println("Registro Studenti: \n");
-		for (int i = 0; i < index; i++) {
-			System.out.println(students[i]);
+		for (int i = 0; i < this.students.length; i++) {
+			System.out.println(students[i].getStudentInfo());
 		}
 	}
 }

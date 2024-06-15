@@ -13,14 +13,7 @@ package org.snacks.java;
 		
 	}
 	
-	String getAllData() {
-		return this.firstName + " " + this.lastName + ", " + this.age + " anni";
+	String getStudentInfo() {
+		return this.lastName + " " + this.firstName + ", " + this.age + " anni";
 	}
-	
-
-	public static void main(String[] args) {	
-		Studente studente = new Studente ("Ajeje", "Brazorf", 33);
-		System.out.println(studente.getAllData());
-	}
-
 }
