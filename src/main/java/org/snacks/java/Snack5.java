@@ -16,12 +16,22 @@ public class Snack5 {
 		
 		
 		
-		checkChiaveDuplicata("francesco");
-
+		if (checkChiaveDuplicata("francesc")) {
+			System.out.println("elemento già presente");
+		}
+		
 	}
 	
-	public static void checkChiaveDuplicata (String key) {
+	public static boolean checkChiaveDuplicata (String key) {
 		
+		int size = elementi.keySet().size();
+		
+		elementi.put(key, "");
+		
+		if (elementi.keySet().size() == size) {
+			return true;
+		}
+		else return false;
 		
 		
 	}
