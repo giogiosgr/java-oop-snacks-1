@@ -15,25 +15,26 @@ public class Snack5 {
 		elementi.put("francesco", "presente");
 		
 		
-		
-		if (checkChiaveDuplicata("francesc")) {
+
+		if (checkChiaveDuplicata("francesco")) {
 			System.out.println("elemento già presente");
 		}
-		
+
 	}
 	
 	public static boolean checkChiaveDuplicata (String key) {
 		
 		int size = elementi.keySet().size();
 		
-		elementi.put(key, "");
+		// deepcopy dell'HashMap originale
+		HashMap<String, String> newElementi = new HashMap<String, String>(elementi);
 		
-		if (elementi.keySet().size() == size) {
+		newElementi.put(key, "");
+		
+		if (newElementi.keySet().size() == size) {
 			return true;
-		}
-		else return false;
-		
-		
-	}
-
+		}   else {
+			  return false;
+		}	
+    }
 }
