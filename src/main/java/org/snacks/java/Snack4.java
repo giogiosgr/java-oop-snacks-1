@@ -14,6 +14,8 @@ public class Snack4 {
 	lista.add("adele");
 	lista.add("ciccio");
 	lista.add("pasticcio");
+	lista.add("rrr");
+	lista.add("rr");
 	
 	ordina();
 	
@@ -27,7 +29,7 @@ public class Snack4 {
 		String appoggio;
 		for (int i = 0; i < lista.size(); i++) {
 			for (int j = i+1; j < lista.size(); j++) {
-				if (lista.get(j).charAt(0) < lista.get(i).charAt(0)) {
+				if (lista.get(j).compareTo(lista.get(i)) < 0) {
 					appoggio = lista.get(i);
 					lista.set(i, lista.get(j));		
 					lista.set(j, appoggio);			
