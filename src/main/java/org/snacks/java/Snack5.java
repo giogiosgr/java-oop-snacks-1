@@ -8,30 +8,27 @@ public class Snack5 {
 
 	public static void main(String[] args) {
 		
-		
 		elementi.put("andrea", "presente");
 		elementi.put("giacomo", "assente");
 		elementi.put("giulia", "assente");
 		elementi.put("francesco", "presente");
 		
-		
-
-		if (checkChiaveDuplicata("francesco")) {
+		if (checkChiaveDuplicata(elementi, "francesco")) {
 			System.out.println("elemento già presente");
-		}
+		} else System.out.println("elemento non presente");
 
 	}
 	
-	public static boolean checkChiaveDuplicata (String key) {
+	public static boolean checkChiaveDuplicata (HashMap<String, String> newMap, String key) {
 		
-		int size = elementi.keySet().size();
+		// nuovo HashSet
+		HashSet <String> temp = new HashSet<String>(newMap.keySet());
 		
-		// deepcopy dell'HashMap originale
-		HashMap<String, String> newElementi = new HashMap<String, String>(elementi);
+		int size = newMap.keySet().size();
 		
-		newElementi.put(key, "");
+		temp.add(key);
 		
-		if (newElementi.keySet().size() == size) {
+		if (temp.size() == size) {
 			return true;
 		}   else {
 			  return false;
