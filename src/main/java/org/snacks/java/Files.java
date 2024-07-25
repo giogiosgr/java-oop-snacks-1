@@ -7,9 +7,9 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class Files {
   public static void main(String[] args) {
     try {
-      File myObj = new File("readme.txt");
+      File myObj = new File("readme.txt"); //Il file si trova nella directory radice del progetto
       Scanner myReader = new Scanner(myObj); 
-      String data = myReader.nextLine(); //Il file si trova nella directory radice del progetto
+      String data = myReader.nextLine(); 
       System.out.println(data);
       myReader.close();
     } catch (FileNotFoundException e) {
