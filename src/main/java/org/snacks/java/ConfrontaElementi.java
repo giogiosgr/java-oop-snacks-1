@@ -27,7 +27,7 @@ public class ConfrontaElementi {
 	
 	public static boolean haveSameElements(Set<String> stack1, Set<String> stack2) {
 		
-		if (stack1.size() == stack2.size()) return false;
+		if (stack1.size() != stack2.size()) return false;
 		
 		int count = 0;
 		// dichiarazione primo iterator
